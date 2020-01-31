@@ -23,6 +23,8 @@ defmodule Teacher.CoinDataWorker do
       IO.inspect("Current #{updated_state[:name]} price is $#{updated_state[:price]}")
     end
 
+    schedule_coin_fetch()
+     
     {:noreply, updated_state}
   end
 
